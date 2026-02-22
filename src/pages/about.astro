@@ -6,47 +6,78 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>About</title>
   </head>
-  <body
-    class="bg-rose-50 min-h-screen flex flex-col items-center justify-center font-serif"
-  >
-    <nav
-      class="fixed top-0 w-full flex gap-6 justify-center py-4 bg-rose-50/80 backdrop-blur-sm text-rose-400 text-sm tracking-widest uppercase"
-    >
+  <body class="bg-rose-50 min-h-screen font-serif">
+
+    <nav class="fixed top-0 w-full flex gap-6 justify-center py-4 bg-rose-50/80 backdrop-blur-sm text-rose-400 text-sm tracking-widest uppercase">
       <a href="/" class="hover:text-green-800 transition">Home</a>
       <a href="/about" class="hover:text-green-800 transition">About</a>
       <a href="/contact" class="hover:text-green-800 transition">Contact</a>
     </nav>
 
-    <main class="text-center px-6">
-      <p class="text-green-800 tracking-widest uppercase text-sm mb-4"></p>
-      <h1 class="text-6xl text-green-800 mb-6">
-        <span class="italic">Where to reach me</span>
-      </h1>
-      <ul class="space-y-3 text-rose-400">
-        <li>
-          <a href="tel:2403093199" class="hover:text-rose-700 transition"
-            >240-309-3199</a>
-        </li>
-        <li>
-          <a
-            href="mailto:prestonrbattle@gmail.com"
-            class="hover:text-rose-700 transition">prestonrbattle@gmail.com</a>
-        </li>
-        <li>
-          <a
-            href="https://linkedin.com/in/prestonbattle"
-            class="hover:text-rose-700 transition"
-            >linkedin.com/in/prestonbattle</a>
-        </li>
-      </ul>
-      <a
-        href="/about"
-        class="mt-8 inline-block px-6 py-3 bg-rose-300 text-white rounded-full hover:bg-rose-400 transition"
-      >
-        Learn more about me →
-      </a>
+    <main class="max-w-3xl mx-auto px-6 pt-32 pb-16">
+
+      <!-- Header -->
+      <h1 class="text-6xl text-green-800 mb-2 italic">About Me</h1>
+    
+      <!-- Summary -->
+      <section class="mb-10">
+        <h2 class="text-xs tracking-widest uppercase text-rose-300 mb-3">My Journey</h2>
+        <p class="text-rose-400 leading-relaxed">
+          My web development journey started 3 years ago when I enrolled into the University of North Florida, studying a bachelors Information Science. Since then 
+          I've started an internship at the TNT Dental, being responsible for dev operations for over 150 sites country wide. Outside of educationa and work I am also a local musician 
+          for the band Armadillo Operator. After graduating this May I plan to begin many new projects within TNT Dental and other local entrepeneurs, stayed tuned for more.
+        </p>
+      </section>
+
+      <hr class="border-rose-200 mb-10" />
+
+      <!-- Experience -->
+      <section class="mb-10">
+        <h2 class="text-xs tracking-widest uppercase text-rose-300 mb-6">Experience</h2>
+
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline mb-1">
+            <h3 class="text-green-800 text-lg">Job Title</h3>
+            <span class="text-rose-300 text-sm">October 2023 – Present</span>
+          </div>
+          <p class="text-rose-400 text-sm mb-2 italic">TNT Dental · Houston, Texas</p>
+          <ul class="list-disc list-inside text-rose-400 space-y-1 text-sm marker:text-rose-300">
+            <li>Responsible for performing dev op duties for new and existing websites</li>
+            <li>Responsbile for maintaining and pushing live over 150 websites</li>
+            <li>Initialized and configured blogs for clients</li>
+          </ul>
+        </div>
+
+        <div class="mb-6">
+          <div class="flex justify-between items-baseline mb-1">
+            <h3 class="text-green-800 text-lg">Previous Job Title</h3>
+
+      <hr class="border-rose-200 mb-10" />
+
+      <!-- Education -->
+      <section class="mb-10">
+        <h2 class="text-xs tracking-widest uppercase text-rose-300 mb-6">Education</h2>
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="text-green-800 text-lg">University of North Florida</h3>
+          <span class="text-rose-300 text-sm">Expected May 2022</span>
+        </div>
+        <p class="text-rose-300 text-sm italic">Bachelor of Science in Information Science and Associates in Digital Marketing</p>
+      </section>
+
+      <hr class="border-rose-200 mb-10" />
+
+      <!-- Skills -->
+      <section>
+        <h2 class="text-xs tracking-widest uppercase text-rose-300 mb-4">Skills</h2>
+        <div class="flex flex-wrap gap-3">
+          {["HTML", "Typescript", "Tailwind", "SQL", "Astro", "Node", "React"].map(skill => (
+            <span class="px-4 py-2 bg-rose-100 text-green-900 rounded-full text-sm">{skill}</span>
+          ))}
+        </div>
+      </section>
+
     </main>
   </body>
 </html>
